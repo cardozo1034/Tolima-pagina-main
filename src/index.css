@@ -1,0 +1,186 @@
+/* =============================================
+   RESET BÁSICO
+   ============================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #fdf5e6;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+/* =============================================
+   BARRA DE NAVEGACIÓN
+   ============================================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #641126; /* Vinotinto */
+  padding: 16px 32px;
+}
+
+.logo {
+  color: #eab308; /* Oro */
+  font-size: 1.4rem;
+  font-weight: bold; /* Añadido para que resalte más */
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+/* Botones de navegación */
+.nav-btn {
+  background-color: transparent;
+  color: #eab308; /* Oro */
+  border: 2px solid #eab308; /* Oro */
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Interacción: cambio de color al pasar el cursor (hover) */
+.nav-btn:hover {
+  background-color: #eab308; /* Oro */
+  color: #641126; /* Vinotinto */
+  border-color: #eab308;
+}
+
+/* Estado activo: indica en qué "página" estamos parados */
+.nav-btn.active {
+  background-color: #eab308; /* Oro */
+  color: #641126; /* Vinotinto */
+  border-color: #eab308;
+}
+
+/* =============================================
+   CONTENIDO / PÁGINAS SIMULADAS
+   ============================================= */
+.content {
+  max-width: 1000px;
+  margin: 48px auto;
+  padding: 0 24px;
+}
+
+.page {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 32px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #641126; /* Acento Vinotinto en la tarjeta */
+}
+
+.page h2 {
+  margin-bottom: 16px;
+  color: #641126; /* Vinotinto */
+  border-bottom: 2px solid #eab308; /* Línea Oro debajo del título */
+  padding-bottom: 8px;
+}
+
+.page p {
+  margin-bottom: 12px;
+}
+
+/* Clase clave de la SPA: oculta una sección sin eliminarla del DOM */
+.hidden {
+  display: none;
+}
+
+/* =============================================
+   NUEVO CONTENIDO: NOTICIAS
+   ============================================= */
+.noticias-tolima {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.noticias-tolima h3 {
+  color: #c29000; /* Oro oscuro */
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+}
+
+.contenedor-noticias {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap; /* Permite que se adapte a pantallas pequeñas */
+}
+
+.tarjeta-noticia {
+  background-color: #fdfbf7;
+  border-left: 5px solid #641126;
+  border-radius: 5px;
+  padding: 16px;
+  flex: 1;
+  min-width: 220px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.tarjeta-noticia h4 {
+  color: #641126;
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+}
+
+.tarjeta-noticia p {
+  font-size: 0.9rem;
+  color: #4b5563;
+  margin-bottom: 0;
+}
+/* =============================================
+   ESTILOS PARA LAS IMÁGENES DE LAS NOTICIAS
+   ============================================= */
+.img-noticia {
+  width: 100%;             /* La imagen ocupa todo el ancho de la tarjeta */
+  height: 160px;           /* Altura fija para que ambas tarjetas se vean iguales */
+  object-fit: cover;       /* Recorta la imagen sin deformarla ni aplastarla */
+  border-radius: 4px;      /* Bordes ligeramente redondeados */
+  margin-bottom: 12px;     /* Espacio entre la imagen y el título */
+}
+/* =============================================
+   SECCIÓN DEPORTES TOLIMA - 3 TARJETAS GRANDES
+   ============================================= */
+.grid-deportes-3 {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+.tarjeta-deporte-3 {
+  flex: 1;
+  min-width: 280px;
+  background-color: #fdfbf7;
+  border-radius: 8px;
+  padding: 32px; /* Mayor tamaño interior */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  border-top: 6px solid #641126; /* Detalle vinotinto */
+}
+
+/* La tarjeta del centro lleva borde superior dorado para destacar */
+.tarjeta-deporte-3:nth-child(2) {
+  border-top-color: #eab308;
+}
+
+.tarjeta-deporte-3 h4 {
+  color: #641126;
+  margin-bottom: 12px;
+  font-size: 1.25rem; /* Título más grande */
+}
+
+.tarjeta-deporte-3 p {
+  font-size: 1.05rem; /* Texto más grande y legible */
+  color: #4b5563;
+  margin-bottom: 0;
+}
